@@ -84,17 +84,12 @@ app OpenSaaS {
   },
 
   emailSender: {
-    // NOTE: "Dummy" provider is just for local development purposes.
-    //   Make sure to check the server logs for the email confirmation url (it will not be sent to an address)!
-    //   Once you are ready for production, switch to e.g. "SendGrid" or "Mailgun" providers. Check out https://docs.opensaas.sh/guides/email-sending/ .
-    provider:  Resend {
-    apiKey: env("RESEND_API_KEY")
-  },
-     defaultFrom: {
+  provider: Resend(env("RESEND_API_KEY")),
+  defaultFrom: {
     name: "Open SaaS App",
     email: "onboarding@resend.dev"
   }
-  },
+},
 }
 
 route LandingPageRoute { path: "/", to: LandingPage }
