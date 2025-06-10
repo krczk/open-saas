@@ -83,14 +83,15 @@ app OpenSaaS {
     rootComponent: import App from "@src/client/App",
   },
 
-emailSender: {
-  provider: Resend {
+  emailSender: {
+    provider: Resend {
     secret: envVar("RESEND_API_KEY")
-  },
-  defaultFrom: {
+    },
+    defaultFrom: {
     name: "Open SaaS App",
     email: "onboarding@resend.dev"
-  }
+    },
+  },
 }
 
 
