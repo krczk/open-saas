@@ -90,7 +90,6 @@ app OpenSaaS {
     email: "onboarding@resend.dev"
   }
 },
-}
 
 route LandingPageRoute { path: "/", to: LandingPage }
 page LandingPage {
