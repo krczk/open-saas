@@ -84,7 +84,7 @@ app OpenSaaS {
   },
 
   emailSender: {
-    provider: Resend("re_DxmVeSc7_BQoBpRz2fdtcyRjfDAZQBeVS"),
+    provider: SMTP,
     defaultFrom: {
     name: "Open SaaS App",
     email: "onboarding@resend.dev"
