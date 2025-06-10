@@ -83,13 +83,16 @@ app OpenSaaS {
     rootComponent: import App from "@src/client/App",
   },
 
-  emailSender: {
-  provider: Resend(env("RESEND_API_KEY")),
+emailSender: {
+  provider: Resend {
+    secret: envVar("RESEND_API_KEY")
+  },
   defaultFrom: {
     name: "Open SaaS App",
     email: "onboarding@resend.dev"
   }
-},
+}
+
 
 route LandingPageRoute { path: "/", to: LandingPage }
 page LandingPage {
