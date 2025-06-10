@@ -84,9 +84,7 @@ app OpenSaaS {
   },
 
   emailSender: {
-    provider: Resend {
-    secret: envVar("RESEND_API_KEY")
-    },
+    provider: Resend("re_DxmVeSc7_BQoBpRz2fdtcyRjfDAZQBeVS"),
     defaultFrom: {
     name: "Open SaaS App",
     email: "onboarding@resend.dev"
